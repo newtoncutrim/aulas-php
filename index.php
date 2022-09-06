@@ -217,6 +217,16 @@
                                 construct e destruct
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=heranca">
+                                HERANÇA
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=emcapsulamento">
+                                emcapsulamento
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
