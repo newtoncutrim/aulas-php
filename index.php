@@ -227,6 +227,11 @@
                                 emcapsulamento
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=estatico">
+                                estatico
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
