@@ -9,12 +9,14 @@ class Data {
    public function exibirData() {
         return "{$this->dia}/{$this->mes}/{$this->ano}";
    }
+   
 }
 
 $data = new Data();
 $data->dia = 12;
 $data->mes = 05;
 $data->ano = 1998;
+// unset($data);
 
 echo $data->exibirData();
 ?>
