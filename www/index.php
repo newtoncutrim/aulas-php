@@ -242,6 +242,16 @@
                                 classe abstrata
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=desafio-7">
+                                desafio 7 erros
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=final">
+                                classe final
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
