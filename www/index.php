@@ -252,6 +252,26 @@
                                 classe final
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=traits">
+                                traits
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=traits2">
+                                traits2
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=magico">
+                                metodos magicos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=orientacao&file=polimorfismo">
+                                metodos magicos
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
