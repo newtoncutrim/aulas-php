@@ -2,7 +2,6 @@
 
 <?php
 
-use Pessoa as GlobalPessoa;
 
 class Pessoa {
     public $nome;
