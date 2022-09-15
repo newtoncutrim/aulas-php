@@ -1,3 +1,38 @@
+<?php session_start();
+
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+if ($_POST['email']) {
+    $usuarios = [
+        [
+            'nome' => 'newton',
+            'email' => 'newton@gmail.com',
+            'senha' => '0982'
+        ],
+        [
+            'nome' => 'teste',
+            'email' => 'teste@gmail.com',
+            'senha' => '147753'
+        ]
+    ];
+    foreach($usuarios as $usuario) {
+        $emailValido = $email === $usuario['email'];
+        $senhaValida = $senha === $usuario['senha'];
+
+        if ($emailValido && $senhaValida) {
+            $_SESSION['erros'] = null;
+            $_SESSION['erros'] = $usuario['nome'];
+
+            header('Location : index.php');
+        }
+    }
+    if(!$_SESSION['usuario']) {
+        $_SESSION['erros'] = ['usuario/senha invalido!'];
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,17 +42,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>curso php</title>
     <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/login.css">
+
 </head>
 
-<body>
+<body class="login">
     <header class="cabecalho">
         <h1>CURSO DE PHP</h1>
         <H2>seja bem vindo</H2>
     </header>
-    
+
     <main class="conteudo">
         <div class="principal">
-            
+            <h3>IDENTIFIQUE - SE!</h3>
+            <?php if ($_SESSION['erros']) : ?>
+                <div class="erros">
+                    <?php foreach ($_SESSION['erros'] as $erro) : ?>
+                        <p><?= $erro ?></p>
+                    <?php endforeach ?>
+                </div>
+            <?php endif ?>
+            <form action="#" method="POST">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha">
+                    <button>enviar</button>
+                </div>
+            </form>
         </div>
     </main>
     <footer class="rodape">
