@@ -311,4 +311,14 @@
             </li>
         </ul>
     </div>
+    <div class="modulo vermelho-escuro">
+        <h3>NAMESPACE</h3>
+        <ul>
+            <li>
+                <a href="exercicio.php?dir=sessao&file=basico_sessao">
+                    basico  sessao
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
