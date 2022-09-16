@@ -8,5 +8,5 @@ if ($_COOKIE['usuario']) {
 if (!$_SESSION['usuario']) {
     header('Location: login.php');
 }
-
+//olhala
 ?>
