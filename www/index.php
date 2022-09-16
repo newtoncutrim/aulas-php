@@ -1,11 +1,5 @@
 <?php 
-session_start();
-
-if (!$_SESSION['usuario']) {
-    header('Location: login.php');
-}
-
-?>
+require_once('sessao.php'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,7 +18,8 @@ if (!$_SESSION['usuario']) {
         <H2>INICIO DOS EXERCICIOS</H2>
     </header>
     <nav class="navegacao">
-        
+        <span class="usuario"><?= $_SESSION['usuario']; ?></span>
+        <a href="logout.php" class="vermelho">sair</a>
     </nav>
     <main class="conteudo">
         <div class="principal">

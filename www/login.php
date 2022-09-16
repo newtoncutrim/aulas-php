@@ -16,15 +16,19 @@ if ($_POST['email']) {
             'senha' => '147753'
         ]
     ];
+
     foreach($usuarios as $usuario) {
         $emailValido = $email === $usuario['email'];
         $senhaValida = $senha === $usuario['senha'];
 
         if ($emailValido && $senhaValida) {
             $_SESSION['erros'] = null;
-            $_SESSION['erros'] = $usuario['nome'];
-
-            header('Location : index.php');
+            $_SESSION['usuario'] = $usuario['nome'];
+            //tempo 60s * 60m * 24hrs * 3 = 3dias:
+            $expiracao = time() + 60 * 60 * 24 * 3;
+            //armazenar no usuario nome
+            setcookie('usuario', $usuario['nome'], $expiracao);
+            header('Location: index.php');
         }
     }
     if(!$_SESSION['usuario']) {

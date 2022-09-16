@@ -159,3 +159,20 @@ p.negrito {
 .navegacao>a.verde {
     background-color: #4caf50;
 }
+
+.navegacao>a.vermelho {
+    border: 2px solid #f44336
+}
+
+.navegacao>a.vermelho {
+    background-color: #f44336;
+}
+
+span.usuario {
+    flex-grow: 1;
+    justify-self: flex-start;
+    color: white;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

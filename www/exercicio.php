@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-if (!$_SESSION['usuario']) {
-    header('Location: login.php');
-}
+require_once('sessao.php');
 
 ?>
 
@@ -26,8 +22,11 @@ if (!$_SESSION['usuario']) {
         <H2>VISUALIZAÇAO DO EXERCICIO</H2>
     </header>
     <nav class="navegacao">
+        <span class="usuario"><?= $_SESSION['usuario']; ?></span>
+
         <a href="https://www.php.net/manual/pt_BR/index.php" class="verde">phpManual</a>
-        <a href="index.php" class="vermelho">Voltar</a>
+        <a href="index.php">Voltar</a>
+        <a href="logout.php" class="vermelho">sair</a>
     </nav>
     <main class="conteudo">
         <div class="principal">
