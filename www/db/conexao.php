@@ -1,10 +1,10 @@
 <?php
 function novaConexao($banco = 'curso_php') {
-    $servidor = 'localhost:8080';
+    $servidor = 'database';
     $usuario = 'root';
     $senha = '1234';
 
-    $conexao = new PDO('mysql:host=localhost;dbname=db', $usuario, $senha);
+    $conexao = mysqli_connect($servidor, $usuario, $senha);
 
     if($conexao->conect_error) {
         die('erro' . $conexao->conect_error); 
