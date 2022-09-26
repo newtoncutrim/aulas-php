@@ -1,4 +1,3 @@
-
 <nav class="modulos">
     <div class="modulo verde">
         <h3>modulo 01 - basico </h3>
@@ -317,9 +316,21 @@
         <ul>
             <li>
                 <a href="exercicio.php?dir=sessao&file=basico_sessao">
-                    basico  sessao
+                    basico sessao
                 </a>
             </li>
         </ul>
+
+    </div>
+    <div class="modulo azul-escuro">
+        <h3>NAMESPACE</h3>
+        <ul>
+            <li>
+                <a href="exercicio.php?dir=db&file=criar_banco">
+                    conexao
+                </a>
+            </li>
+        </ul>
+
     </div>
 </nav>
